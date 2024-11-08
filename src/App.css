@@ -1,0 +1,15 @@
+.carousel {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 400px;
+  z-index: 1;
+}
+
+.media-container {
+  height: 88vh;
+  width: 100%;
+}

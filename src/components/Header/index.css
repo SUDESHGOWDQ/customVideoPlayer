@@ -1,0 +1,13 @@
+.navbar {
+  height: 100px;
+  width: 100%;
+  background: grey;
+  color: white;
+}
+
+.navbar-wrapper {
+  height: inherit;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

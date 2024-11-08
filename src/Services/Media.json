@@ -1,0 +1,20 @@
+{
+  "media": [
+    {
+      "fileType": "image",
+      "url": "https://cdn.pixabay.com/photo/2023/05/23/15/42/bengal-tiger-8013012_1280.jpg"
+    },
+    {
+      "fileType": "video",
+      "url": "https://www.youtube.com/watch?v=L0OEVSUkqbA"
+    },
+    {
+      "fileType": "image",
+      "url": "https://cdn.pixabay.com/photo/2024/03/12/13/13/woman-8628792_1280.jpg"
+    },
+    {
+      "fileType": "video",
+      "url": "https://www.youtube.com/watch?v=FPcYWcASe5U"
+    }
+  ]
+}

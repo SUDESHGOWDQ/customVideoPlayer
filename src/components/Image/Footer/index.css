@@ -1,0 +1,11 @@
+.image-footer {
+  background: transparent;
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  width: 100%;
+}
+
+.middle-controls {
+  color: white;
+}

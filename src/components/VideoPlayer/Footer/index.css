@@ -1,0 +1,62 @@
+.player-footer {
+  height: 100px;
+  width: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 10px;
+}
+
+.player-footer-fullscreen {
+  background: transparent;
+  position: relative;
+  bottom: 80px;
+}
+
+.player-bar {
+  width: 99%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.playing-time,
+.total-time {
+  color: white;
+}
+
+.input-bar {
+  width: inherit;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+.left-controls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.middle-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.right-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}

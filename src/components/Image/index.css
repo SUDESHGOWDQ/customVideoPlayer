@@ -1,0 +1,19 @@
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+}
+
+.images {
+  height: 88vh;
+  width: auto;
+}
+
+.imager {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
