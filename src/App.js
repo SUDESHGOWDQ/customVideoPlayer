@@ -1,12 +1,9 @@
-import React, { useEffect, useState, Suspense } from "react";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "components/Home";
 import useFullscreen from "hooks/useFullscreen";
 import mediaData from "./Services/Media.json";
 import "./App.css";
-
-// Lazy load components
-const Header = React.lazy(() => import("./components/Header"));
-const VideoPlayer = React.lazy(() => import("./components/VideoPlayer"));
-const ImageComponent = React.lazy(() => import("./components/Image"));
 
 const App = () => {
   const { isFullscreen, toggleFullscreen } = useFullscreen();
@@ -41,33 +38,24 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* Suspense to show a loading fallback while components are being lazy-loaded */}
-      <Suspense fallback={<div>Loading...</div>}>
-        <Header isFullscreen={isFullscreen} />
-        <div className="media-container">
-          {currentMedia.fileType === "video" && (
-            <VideoPlayer isFullscreen={isFullscreen} Url={currentMedia.url} />
-          )}
-          {currentMedia.fileType === "image" && (
-            <ImageComponent
-              Url={currentMedia.url}
-              currentIndex={currentIndex}
-              totalData={mediaData.media.length}
-              toggleFullscreen={toggleFullscreen}
-              isFullscreen={isFullscreen}
-            />
-          )}
-
-          <div className="carousel">
-            <button className="carousel-btn" onClick={handlePrevious}>
-              Previous
-            </button>
-            <button className="carousel-btn" onClick={handleNext}>
-              Next
-            </button>
-          </div>
-        </div>
-      </Suspense>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path={"/"}
+            element={
+              <Home
+                isFullscreen={isFullscreen}
+                currentMedia={currentMedia}
+                currentIndex={currentIndex}
+                mediaData={mediaData}
+                toggleFullscreen={toggleFullscreen}
+                handlePrevious={handlePrevious}
+                handleNext={handleNext}
+              />
+            }
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };

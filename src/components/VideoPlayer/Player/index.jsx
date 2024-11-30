@@ -17,6 +17,12 @@ const VideoPlayer = ({
   formatTime,
   url,
 }) => {
+  const handleSeekChange = (e) => {
+    const newTime = parseFloat(e.target.value);
+    playerRef.current.seekTo(newTime);
+    handleSeek(newTime);
+  };
+
   return (
     <div
       className={`video-player ${isFullscreen ? "fullscreen" : ""}`}
@@ -45,6 +51,7 @@ const VideoPlayer = ({
         duration={duration}
         handleSeek={handleSeek}
         formatTime={formatTime}
+        onSeekChange={handleSeekChange}
       />
     </div>
   );

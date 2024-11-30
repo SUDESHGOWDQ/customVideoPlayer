@@ -12,6 +12,7 @@ const Index = ({
   duration,
   handleSeek,
   formatTime,
+  onSeekChange,
 }) => {
   return (
     <div
@@ -27,6 +28,7 @@ const Index = ({
           value={currentTime}
           step="0.1"
           onChange={handleSeek}
+          onInput={onSeekChange}
           className="input-bar"
         />
         <div className="total-time">{formatTime(duration)}</div>
